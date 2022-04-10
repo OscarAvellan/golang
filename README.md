@@ -20,7 +20,6 @@ The robot can be controlled with the following commands:
 - Go 1.18
 
 ## Installing dependencies
-**The following steps can be skipped if using Docker**
 - Installing `Go 1.18` -> [golang installation](https://go.dev/doc/install)
 
 ## Executing app
