@@ -13,8 +13,6 @@ The robot can be controlled with the following commands:
 - [Installing dependencies](#installing-dependencies)
 - [Executing app](#executing-app)
 - [Running tests](#running-tests)
-- [Running app in Docker container](#running-app-in-docker-container)
-- [Assumptions/Design decisions/Trade Offs](#assumptionsdesign-decisionstrade-offs)
 
 <br>
 
