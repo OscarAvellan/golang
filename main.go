@@ -9,28 +9,22 @@ func main() {
 	board := board.Board{}
 	board.Init()
 
-	robot_controller.Place(0, 0, robot.East, &bot, &board)
+	robot_controller.Place(3, 2, robot.East, &bot, &board)
+	robot_controller.Report(&bot, &board)
+
+	robot_controller.Right(&bot)
+	robot_controller.Report(&bot, &board)
+
+	robot_controller.Move(&bot, &board)
+	robot_controller.Report(&bot, &board)
+
+	robot_controller.Move(&bot, &board)
 	robot_controller.Report(&bot, &board)
 
 	robot_controller.Move(&bot, &board)
 	robot_controller.Report(&bot, &board)
 
 	robot_controller.Left(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
 	robot_controller.Report(&bot, &board)
 
 	robot_controller.Move(&bot, &board)
