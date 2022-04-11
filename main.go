@@ -1,32 +1,20 @@
 package main
 
-import "example.com/go_tutorial/robot"
-import "example.com/go_tutorial/board"
-import "example.com/go_tutorial/robot_controller"
+import (
+	"os"
+
+	"example.com/go_tutorial/board"
+	"example.com/go_tutorial/commands_parser"
+	"example.com/go_tutorial/robot"
+	"example.com/go_tutorial/robot_controller"
+)
 
 func main() {
 	bot := robot.Robot{}
 	board := board.Board{}
 	board.Init()
 
-	robot_controller.Place(3, 2, robot.East, &bot, &board)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Right(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Move(&bot, &board)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Move(&bot, &board)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Move(&bot, &board)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Left(&bot)
-	robot_controller.Report(&bot, &board)
-
-	robot_controller.Move(&bot, &board)
-	robot_controller.Report(&bot, &board)
+	file_name := os.Args[1]
+	commands := commands_parser.Parse(file_name)
+	robot_controller.CommandsExecutor(commands, &bot, &board)
 }

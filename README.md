@@ -25,22 +25,8 @@ The robot can be controlled with the following commands:
 ## Executing app
 To run the app, from the project root directory, open a terminal and run:
 ```bash
-$ go run .
-```
-
-Before running the app, in `main.go`, you will need to setup the robot, board and some commands:
-```go
-func main() {
-  bot := robot.Robot{}
-	board := board.Board{}
-	board.Init()
-
-  robot_controller.Place(2, 3, robot.West, &bot, &board)
-  robot_controller.Left(&bot)
-  robot_controller.Move(&bot, &board)
-  robot_controller.Right(&bot)
-  robot_controller.Report(&bot, &board)
-}
+$ go build main.go
+$ ./main commands.txt
 ```
 
 ## Running tests
