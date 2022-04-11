@@ -30,6 +30,8 @@ $ ./main commands.txt
 ```
 
 ## Running tests
+**NOTE: There are missing tests due to lack of time.**
+
 To run the tests, execute the following command from the root directory
 ```bash
 $ go test example.com/go_tutorial/robot_controller
